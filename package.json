@@ -1,0 +1,44 @@
+{
+  "name": "generator-came",
+  "version": "0.0.1",
+  "description": "Nodejs website project template generator for stack CAME (Coffee, Angular, MongoDB, Express)",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "ZheFeng/generator-came",
+  "author": {
+    "name": "Zhe Feng",
+    "email": "fengzhe1983@gmail.com",
+    "url": "https://github.com/ZheFeng"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "coffee",
+    "angular",
+    "mongodb",
+    "mongo",
+    "express",
+    "nodejs",
+    "node",
+    "node.js",
+    "framework"
+  ],
+  "dependencies": {
+    "yeoman-generator": "~0.16.0",
+    "chalk": "~0.4.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  }
+}
