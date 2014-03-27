@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title New app
+
+    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/bower_components/bootflatv2/bootflat/css/bootflat.min.css')
+    script(type="text/javascript", src="/bower_components/jquery/dist/jquery.min.js")
+
+  body
+    .navbar.navbar-default.navbar-static-top
+      .container-fluid
+        .collapse.navbar-collapse
+          .navbar-header
+            a.navbar-brand(href="/") New app
+          ul.nav.navbar-nav
+            li: a(href="/")
+              span.glyphicon.glyphicon-home
+              | &nbsp;Home
+          ul.nav.navbar-nav.pull-right
+            li: a(href="/")
+              span.glyphicon.glyphicon-log-in
+              | &nbsp;Login
+    .container-fluid
+      block main

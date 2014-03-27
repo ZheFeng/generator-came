@@ -25,15 +25,17 @@ var CameGenerator = yeoman.generators.Base.extend({
     // replace it with a short and sweet description of your generator
     this.log(chalk.magenta('You\'re using the fantastic Came generator.'));
 
-    var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
+    // var prompts = [{
+    //   type: 'confirm',
+    //   name: 'someOption',
+    //   message: 'Would you like to enable this option?',
+    //   default: true
+    // }];
+
+    var prompts = []
 
     this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
+      // this.someOption = props.someOption;
 
       done();
     }.bind(this));
@@ -41,8 +43,33 @@ var CameGenerator = yeoman.generators.Base.extend({
 
   app: function () {
     this.mkdir('app');
-    this.mkdir('app/templates');
+    this.mkdir('app/views');
+    this.mkdir('app/controllers');
+    this.mkdir('app/models');
+    this.mkdir('lib');
+    this.mkdir('config');
+    this.mkdir('log');
+    this.mkdir('test');
+    this.mkdir('public');
 
+
+    this.copy('index.coffee', 'app/index.coffee');
+    this.copy('server.coffee', 'app/server.coffee');
+
+    this.copy('keep', 'app/.keep');
+    this.copy('keep', 'app/views/.keep');
+    this.copy('keep', 'app/controllers/.keep');
+    this.copy('keep', 'app/models/.keep');
+    this.copy('keep', 'lib/.keep');
+    this.copy('keep', 'config/.keep');
+    this.copy('keep', 'log/.keep');
+    this.copy('keep', 'test/.keep');
+    this.copy('keep', 'public/.keep');
+
+    this.copy('favicon.ico', 'public/favicon.ico');
+
+    this.copy('Gruntfile.coffee', 'Gruntfile.coffee');
+    this.copy('bowerrc', '.bowerrc');
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
   },
